@@ -60,7 +60,7 @@ export function AppHeaderMenu() {
       {open ? (
         /* Same box as AppShell: mx-auto centering (no translate) + identical radius — crisp corners, no slivers */
         <div
-          className="fixed bottom-0 left-0 right-0 z-[100] mx-auto w-full max-w-lg overflow-hidden [transform:translateZ(0)] md:bottom-5 md:top-5 md:rounded-[var(--app-shell-radius)]"
+          className="fixed bottom-0 left-0 right-0 top-0 z-[100] mx-auto w-full max-w-lg overflow-hidden [transform:translateZ(0)] md:bottom-5 md:top-5 md:rounded-[var(--app-shell-radius)]"
           aria-hidden={false}
         >
           <button
@@ -71,7 +71,7 @@ export function AppHeaderMenu() {
           />
           <nav
             id={panelId}
-            className="absolute right-0 top-0 z-10 flex h-full w-[min(20rem,100%)] flex-col overflow-hidden border-l border-white/10 bg-[#f0f4fa] shadow-[inset_4px_0_12px_rgba(0,0,0,0.06)] rounded-br-[var(--app-shell-radius)] rounded-tr-[var(--app-shell-radius)] rounded-bl-[var(--app-shell-radius)]"
+            className="absolute right-0 top-0 z-10 flex h-full w-[min(20rem,100%)] flex-col overflow-hidden border-l border-white/10 bg-[#f0f4fa] shadow-[inset_4px_0_12px_rgba(0,0,0,0.06)] rounded-br-[var(--app-shell-radius)] rounded-tl-[var(--app-shell-radius)] rounded-bl-[var(--app-shell-radius)]"
             role="dialog"
             aria-modal="true"
             aria-label="Account menu"

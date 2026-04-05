@@ -446,6 +446,10 @@
     inset: calc(var(--spacing) * 0);
   }
 
+  .inset-x-0 {
+    inset-inline: calc(var(--spacing) * 0);
+  }
+
   .start {
     inset-inline-start: var(--spacing);
   }
@@ -864,6 +868,10 @@
   .rounded-t-2xl {
     border-top-left-radius: var(--radius-2xl);
     border-top-right-radius: var(--radius-2xl);
+  }
+
+  .rounded-tl-\[var\(--app-shell-radius\)\] {
+    border-top-left-radius: var(--app-shell-radius);
   }
 
   .rounded-tr-\[var\(--app-shell-radius\)\] {
@@ -2086,6 +2094,12 @@
   @media (min-width: 40rem) {
     .sm\:p-4 {
       padding: calc(var(--spacing) * 4);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:inset-x-0 {
+      inset-inline: calc(var(--spacing) * 0);
     }
   }
 

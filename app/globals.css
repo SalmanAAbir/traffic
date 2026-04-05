@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/* Rich traffic / police + emerald — higher saturation, avoid flat grey */
+:root {
+  /* Match AppShell + menu overlay — one radius avoids slivers at corners */
+  --app-shell-radius: 1.75rem;
+  --background: #ecfdf5;
+  --foreground: #042f2e;
+  --police-950: #020617;
+  --police-900: #0a1628;
+  --police-800: #0f2744;
+  --police-700: #153a5c;
+  --police-600: #1e4976;
+  --gold-bright: #fde047;
+  --gold-400: #facc15;
+  --gold-500: #eab308;
+  --surface-mint: #f0fdf4;
+  --surface-card: #ffffff;
+  --font-family-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-family-sans);
+  --font-mono: var(--font-family-mono);
+
+  --color-police-950: var(--police-950);
+  --color-police-900: var(--police-900);
+  --color-police-800: var(--police-800);
+  --color-police-700: var(--police-700);
+  --color-police-600: var(--police-600);
+  --color-gold-400: var(--gold-400);
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: #ca8a04;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family-sans);
+  -webkit-tap-highlight-color: transparent;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+details[open] .faq-chevron {
+  transform: rotate(180deg);
+}
+
+@supports (padding: max(0px)) {
+  .pb-safe {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+  .pt-safe {
+    padding-top: max(0px, env(safe-area-inset-top));
+  }
+}
